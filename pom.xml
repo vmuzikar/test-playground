@@ -8,34 +8,27 @@
     <artifactId>screenshot-test</artifactId>
     <version>1.1-SNAPSHOT</version>
 
-    <build>
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <artifactId>maven-surefire-plugin</artifactId>
-                    <configuration>
-                        <properties>
-                            <ieDriverArch>Win32</ieDriverArch>
-                        </properties>
-                    </configuration>
-                </plugin>
-            </plugins>
-        </pluginManagement>
-    </build>
+    <properties>
+        <version.org.jboss.arquillian>1.1.13.Final</version.org.jboss.arquillian>
+        <version.org.jboss.arquillian.drone>2.4.2</version.org.jboss.arquillian.drone>
+        <version.org.jboss.arquillian.graphene>2.3.1</version.org.jboss.arquillian.graphene>
+    </properties>
 
     <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>org.jboss.arquillian</groupId>
                 <artifactId>arquillian-bom</artifactId>
-                <version>1.1.13.Final</version>
+                <version>${version.org.jboss.arquillian}</version>
                 <type>pom</type>
+                <scope>import</scope>
             </dependency>
             <dependency>
                 <groupId>org.jboss.arquillian.extension</groupId>
                 <artifactId>arquillian-drone-bom</artifactId>
-                <version>2.4.2</version>
+                <version>${version.org.jboss.arquillian.drone}</version>
                 <type>pom</type>
+                <scope>import</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -44,18 +37,18 @@
         <dependency>
             <groupId>org.jboss.arquillian.junit</groupId>
             <artifactId>arquillian-junit-container</artifactId>
-            <version>1.1.13.Final</version>
+            <version>${version.org.jboss.arquillian}</version>
         </dependency>
         <dependency>
             <groupId>org.jboss.arquillian.graphene</groupId>
             <artifactId>graphene-webdriver</artifactId>
-            <version>2.3.1</version>
+            <version>${version.org.jboss.arquillian.graphene}</version>
             <type>pom</type>
         </dependency>
         <dependency>
             <groupId>org.jboss.arquillian.graphene</groupId>
             <artifactId>arquillian-browser-screenshooter</artifactId>
-            <version>2.3.1</version>
+            <version>${version.org.jboss.arquillian.graphene}</version>
         </dependency>
 
     </dependencies>
