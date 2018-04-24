@@ -21,7 +21,7 @@ public class DockerTest {
 
         Container.ExecResult result = container.execInContainer("echo", testStr);
 
-        System.out.printf("STDOUT: %s\n---\nSTDERR: %s", result.getStdout(), result.getStderr());
+        System.out.printf("STDOUT: %s\n---\nSTDERR: %s\n", result.getStdout(), result.getStderr());
 
         assertEquals(testStr + "\n", result.getStdout());
     }
