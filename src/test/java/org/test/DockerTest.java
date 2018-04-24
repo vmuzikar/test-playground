@@ -13,8 +13,9 @@ public class DockerTest {
     @Test
     public void cmdOutputTest() throws Exception {
         final String testStr = "Hello World!";
+        final String dockerIoPrefix = System.getProperty("docker.io") != null ? "docker.io/" : "";
 
-        GenericContainer container = new GenericContainer("centos:latest")
+        GenericContainer container = new GenericContainer(dockerIoPrefix + "centos:latest")
                 .withCommand("sleep infinity");
         container.start();
 
