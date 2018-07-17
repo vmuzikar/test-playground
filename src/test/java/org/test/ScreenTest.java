@@ -16,7 +16,7 @@ public class ScreenTest {
 
     @Test
     public void screenshot() throws Exception {
-        driver.manage().window().maximize();
+        //driver.manage().window().maximize();
         driver.navigate().to("http://www.google.com");
         Thread.sleep(5000);
     }
