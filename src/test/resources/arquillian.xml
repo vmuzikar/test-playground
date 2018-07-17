@@ -3,10 +3,6 @@
             xmlns="http://jboss.org/schema/arquillian"
             xsi:schemaLocation="http://jboss.org/schema/arquillian http://www.jboss.org/schema/arquillian/arquillian_1_0.xsd">
     <extension qualifier="webdriver">
-        <property name="browser">appium</property>
-        <property name="platformName">ios</property>
-        <property name="deviceName">iPhone 8</property>
-        <property name="browserName">safari</property>
-        <property name="automationName">XCUITest</property>
+        <property name="browser">firefox</property>
     </extension>
 </arquillian>
